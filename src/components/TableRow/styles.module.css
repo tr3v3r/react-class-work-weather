@@ -1,0 +1,10 @@
+.cell {
+    border: 1px solid grey;
+    margin: 0;
+    padding: 10px;
+    box-sizing: border-box;
+    min-width: 120px;
+    font-family: sans-serif;
+    text-align: center;
+}
+

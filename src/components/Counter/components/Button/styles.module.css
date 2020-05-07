@@ -1,0 +1,12 @@
+.container {
+    display: flex;
+    width: 100px;
+    height: 100px;
+    justify-content: center;  
+    align-items: center;
+}
+
+.text {
+    color: #fff;
+    font-size: 40px;
+}
