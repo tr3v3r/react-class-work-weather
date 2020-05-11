@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
-import { Counter, Button, Input, Table, TableRow } from './components';
+import { Counter, Button, Input, Table, TableRow, SuperBoxSearch} from './components';
 import { getWeather } from './api'
 import { updateStorageData, getInitialDataFromStorage } from './storage'
 
@@ -53,6 +53,7 @@ function App() {
           }
         
       </Table>
+      <SuperBoxSearch />
     </div>
   );
 }
