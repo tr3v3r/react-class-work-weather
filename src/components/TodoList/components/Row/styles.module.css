@@ -1,0 +1,15 @@
+.container {
+  width: 500px;
+  border: 1px solid black;
+  margin: 10px auto;
+  border-radius: 30px;
+  padding-bottom: 20px;
+}
+
+.activeContainer {
+    background-color: deepskyblue;
+}
+
+.buttonContainer > * {
+  margin: 0 10px;
+}
