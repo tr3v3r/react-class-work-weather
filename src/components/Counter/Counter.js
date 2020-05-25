@@ -1,31 +1,40 @@
-import React, { useState } from 'react'
-import { Button } from './components'
-import styles from './styles.module.css'
+import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { Button } from './components';
+import styles from './styles.module.css';
+import { INCREMENT, DECREMENT, RESET } from './actions';
 
 export const Counter = () => {
-    const [value, setValue] = useState(0)
+  const dispatch = useDispatch();
 
 
-    const increment = () => {
-        setValue(value + 1)
-    }
+  const value = useSelector((state) => {
+    return state.counter.value;
+  });
 
-    const decrement = () => {
-        setValue(value - 1)
-    }
 
-    const reset = () => {
-        setValue(0)
-    }
+  const increment = () => {
+    dispatch({ type: INCREMENT });
+  };
 
-   return <div className={styles.container}>
-       <div className={styles.counterContainer}>
-           <span className={styles.counterText}>{value}</span>
-       </div>
-       <div className={styles.buttonsPanel}>
-           <Button onClick={increment} color="green">+</Button>
-           <Button onClick={reset} color="deepskyblue">*</Button>
-           <Button onClick={decrement} color="red">-</Button>
-       </div>
-   </div> 
-}
+  const decrement = () => {
+    dispatch({ type: DECREMENT });
+  };
+
+  const reset = () => {
+    dispatch({ type: RESET });
+  };
+
+  return (
+    <div className={styles.container}>
+      <div className={styles.counterContainer}>
+        <span className={styles.counterText}>{value}</span>
+      </div>
+      <div className={styles.buttonsPanel}>
+        <Button onClick={increment} color="green">+</Button>
+        <Button onClick={reset} color="deepskyblue">*</Button>
+        <Button onClick={decrement} color="red">-</Button>
+      </div>
+    </div>
+  );
+};

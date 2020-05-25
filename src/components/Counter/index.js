@@ -1,1 +1,2 @@
-export { Counter } from './Counter'
+export { Counter } from './Counter';
+export { counterReducer } from './reducer';

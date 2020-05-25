@@ -1,14 +1,18 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './App.css';
 import {
-  TodoList,
+  Counter,
+  SuperBoxSearch,
+  WeatherApp,
 } from './components';
 
 
 export function App() {
   return (
     <div className="App">
-      <TodoList />
+      <WeatherApp />
+      <Counter />
+      <SuperBoxSearch />
     </div>
   );
 }

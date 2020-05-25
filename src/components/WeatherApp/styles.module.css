@@ -1,0 +1,11 @@
+.container {
+    width: 500px;
+    margin: 20px;
+}
+
+.formContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 20px 0;
+}
