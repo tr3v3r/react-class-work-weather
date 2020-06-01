@@ -1,0 +1,28 @@
+.container {
+    background-color: deepskyblue;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container > * {
+    margin: 0 15px;
+}
+
+.link {
+    text-decoration: none;
+    color: white;
+  
+}
+
+.activeLink {
+    color: black; 
+}
+
+.link:hover {
+    text-decoration: underline; 
+}
+
+
+
